@@ -5,23 +5,12 @@ This project is a FastAPI service that verifies tokens received from a frontend 
 ## Project Structure
 
 ```
-fastapi-token-verifier
-├── app
-│   ├── main.py                # Entry point of the FastAPI application
-│   ├── api
-│   │   └── v1
-│   │       └── endpoints
-│   │           └── token_verifier.py  # Endpoint for token verification
-│   ├── core
-│   │   └── config.py          # Configuration settings
-│   ├── models
-│   │   └── token.py           # Data model for the token
-│   ├── schemas
-│   │   └── token.py           # Pydantic schemas for validation
-│   └── utils
-│       └── token.py           # Utility functions for token handling
-├── requirements.txt            # Project dependencies
-└── README.md                   # Project documentation
+.
+├── main.py
+├── pyproject.toml
+├── README.md
+├── requirements.txt
+└── uv.lock
 ```
 
 ## Setup Instructions
@@ -29,13 +18,13 @@ fastapi-token-verifier
 1. Clone the repository:
    ```
    git clone <repository-url>
-   cd fastapi-token-verifier
+   cd cheveningbrew-auth-server
    ```
 
 2. Create a virtual environment:
    ```
-   python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   python -m venv .venv
+   source .venv/bin/activate  # On Windows use `venv\Scripts\activate`
    ```
 
 3. Install the required dependencies:
@@ -48,18 +37,18 @@ fastapi-token-verifier
 To run the FastAPI application, execute the following command:
 
 ```
-uvicorn app.main:app --reload
+python -m uvicorn main:app --reload --port 8001
 ```
 
-The application will be available at `http://127.0.0.1:8000`.
+The application will be available at `http://127.0.0.1:8001`.
 
 ## API Endpoints
 
-- **POST /api/v1/verify-token**
+- **POST "/api/auth/google"**
   - Description: Verifies the provided token.
   - Request Body: Token data in JSON format.
   - Response: User information or authentication failure message.
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License.# cheveningbrew-user-auth-server
