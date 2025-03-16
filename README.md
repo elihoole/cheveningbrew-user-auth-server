@@ -24,7 +24,7 @@ This project is a FastAPI service that verifies tokens received from a frontend 
 2. Create a virtual environment:
    ```
    python -m venv .venv
-   source .venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   source .venv/bin/activate  # On Windows use `.venv\Scripts\activate`
    ```
 
 3. Install the required dependencies:
